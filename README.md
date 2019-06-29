@@ -1,4 +1,4 @@
-# EFCoreChangeReport ![Nuget](https://img.shields.io/nuget/v/EFCoreChangeReport.svg?style=flat) ![GitHub last commit](https://img.shields.io/github/last-commit/Sulexa/EFCoreChangeReport.svg)
+# EFCoreChangeReport [![Nuget](https://img.shields.io/nuget/v/EFCoreChangeReport.svg?style=flat)](https://www.nuget.org/packages/EFCoreChangeReport) [![GitHub last commit](https://img.shields.io/github/last-commit/Sulexa/EFCoreChangeReport.svg?style=flat)](https://github.com/Sulexa/EFCoreChangeReport/commits/master)
 
 <!-- ![Nuget](https://img.shields.io/nuget/dt/EFCoreChangeReport.svg) -->
 
@@ -22,7 +22,9 @@ And at least one sink :
 
 #### EFCoreChangeReport Sinks made by me :
 
-* ```Install-Package EFCoreChangeReport.Sink.ToConsole```
+* [EFCoreChangeReport.Sink.Console](https://github.com/Sulexa/EFCoreChangeReport.Sink.Console/) (released)
+* EFCoreChangeReport.Sink.ToSqlServer (comming soon)
+* EFCoreChangeReport.Sink.ToMongoDB (comming soon)
 
 
 ## Usage
@@ -55,16 +57,18 @@ _eFCoreChangeReportService.SaveChangeReports(dbContext);
 The PrepareChangeReports prepare the reports for updated and deleted elements, and keep track of all the added elements (at this point the sinks are still not used).
 The SaveChangeReports prepare the reports for created elements and use the sinks.
 
-A performance test project is also available [here](https://github.com/Sulexa/EFCoreChangeReport.PerformanceTest/) as exemple.
+<!-- A performance test project is also available [here](https://github.com/Sulexa/EFCoreChangeReport.PerformanceTest/) as example. -->
 
 ## Roadmap/Patch notes
+
+
 
 ### 1.0 (Released)
 * Initial library working
 * Implementing way to send all the databases saved changes to your sinks
 * Sinks system for customisation
 
-### 1.0-.NETCore3.0 (Coming Soon)
+### 1.0-NETCore3.0 (Coming Soon)
 * Verified compatibility with .NET Core 3.0
 * Use of the newly integrated JSON writer instead of newtonsoft
 
@@ -88,7 +92,6 @@ Special thanks to the packages which inspired EFCoreChangeReport :
 * [AutoHistory](https://github.com/Arch/AutoHistory/) which inspired me for the concept of auto-saving change on the entity system
 * [Serilog](https://github.com/serilog/serilog) which inspired me with the modularity of sink system
 
-## License
+## License [![GitHub](https://img.shields.io/github/license/Sulexa/EFCoreChangeReport.svg?style=flat)](LICENSE.TXT)
 
 EFCoreChangeReport is licensed under the [MIT license](LICENSE.TXT).
-<!-- ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg) -->
